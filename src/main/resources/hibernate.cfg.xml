@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3300/student_exam</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">Vishvajit108</property>
+
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <property name="hbm2ddl.auto">update</property>
+        <mapping class="com.neebal.entities.Book"/>
+        <mapping class="com.neebal.entities.Author"/>
+        <mapping class="com.neebal.entities.Location"/>
+        <mapping class="com.neebal.entities.PublicationHouse"/>
+        <mapping class="com.neebal.entities.Topic"/>
+        <mapping class="com.neebal.entities.Question"/>
+        <mapping class="com.neebal.entities.QuestionOptions"/>
+        <mapping class="com.neebal.entities.Student"/>
+        <mapping class="com.neebal.entities.Exam"/>
+        <mapping class="com.neebal.entities.BookStudent"/>
+<!--        <mapping class="com.neebal.entities.Professor"/>-->
+        <mapping class="com.neebal.entities.StudentsExams"/>
+        <mapping class="com.neebal.entities.ExamQuestion"/>
+        <mapping class="com.neebal.entities.StudentsAnswers"/>
+        <mapping class="com.neebal.entities.Person"/>
+    </session-factory>
+</hibernate-configuration>
